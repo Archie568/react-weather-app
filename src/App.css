@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#root {
+    width: 100vw;
+    height: 100vh;
+    background: lightgreen;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+.input {
+    margin-top: 3rem;
+    padding: 15px;
+    width: 80%;
+    border: 1px solid gray;
+    border-radius: 3px;
+    font-size: 16px;
+}
+
+.input:focus {
+    outline: none;
+}
