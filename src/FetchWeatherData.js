@@ -23,20 +23,21 @@ function FetchWeatherData() {
     }
 
   return (
-    <div>
+    <div className='weather-container' >
         <input className='input' type="text" value={cityName} onChange={(e)=> setCityName(e.target.value)} />
-        <button type='button' onClick={handleClick} >Check Weather</button>
+        <button className='button' type='button' onClick={handleClick} >Check Weather</button>
         {
             typeof currentWeather.main === "undefined" ? (
                 <div>
-                    <p>Please enter city to check the current weather</p>
+                    <p className='para' >Please enter city to check the current weather</p>
                 </div>
             ): (
-                <div>
-                    <p>{currentWeather.name}</p>
-                    <p>{Math.round(currentWeather.main.temp)} <span>&#8451;</span> </p>
-                    <p>{currentWeather.weather[0].main}</p>
-                    <p>{currentWeather.sys.country}</p>
+                <div className='weather-card' >
+                    <p className='weather-temp' >{Math.round(currentWeather.main.temp)} <span>&#8451;</span> </p>
+                    <img className='weather-icons' src={`http://openweathermap.org/img/w/${currentWeather.weather[0].icon}.png`} alt='icon of current weather'></img>
+                    <p className='weather-description' >{currentWeather.weather[0].main}</p>
+                    <p className='weather-location' >{currentWeather.name}</p>
+
                 </div>
             )
         }
