@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Barriecito&display=swap');
 * {
     margin: 0;
@@ -27,6 +27,15 @@ body {
     font-weight: 400;
 }
 
+.para {
+    color: aliceblue;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .input {
     padding: 0.7rem;
     width: 50vw;
@@ -48,7 +57,7 @@ body {
     margin-top: 70vh;
     transform: translate(-50%, -50%);
     left: 50%;
-    padding: 0.8rem 0.3rem;
+    padding: 0.9rem 0.3rem;
     border: 1px none;
     border-radius: 0.5rem;
     font-size: 1.2rem;
@@ -56,16 +65,15 @@ body {
 }
 
 .button:hover {
-    background: red;
+    background: orangered;
     color: aliceblue;
     outline: none;
 }
 
 .weather-card {
-    font-size: 2rem;
     width: 15.5rem;
     height: 18.75rem;
-    background: lightblue;
+    background: lightpink;
     border-radius: 0.5rem;
     position: absolute;
     transform: translate(-50%, -50%);
@@ -84,14 +92,17 @@ body {
 
 .weather-temp {
     font-size: 1.7rem !important;
+    font-weight: 300;
 }
 
 .weather-description {
     font-size: 1.5rem !important;
+    font-weight: 400;
 }
 
 .weather-location {
-    font-size: 2.5rem !important;
+    font-size: 2rem !important;
+    font-weight: 500 !important;
     font-weight: 400;
     line-height: 1.7;
 }

@@ -10,21 +10,29 @@ function FetchWeatherData() {
     useEffect(()=> {
         axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${btnClick}&units=metric&appid=${apiKey}`)
             .then(res => {
-                console.log(res)
+                // console.log(res)
                 setCurrentWeather(res.data)
                 setCityName("")
             })
             .catch(err => console.log(err))
     },[btnClick])
 
-    const handleClick = () => {
+    const handleClick = (e) => {
+        e.preventDefault()
         setBtnClick(cityName)
-
     }
 
+    const handleEnter = (e) => {
+        if(e.key === 13) {
+            setBtnClick(cityName)
+        }
+    }
+
+    
   return (
     <div className='weather-container' >
-        <input className='input' type="text" value={cityName} onChange={(e)=> setCityName(e.target.value)} />
+        <input className='input' type="text" value={cityName} onChange={(e)=> setCityName(e.target.value)}
+        onKeyPress={handleEnter} />
         <button className='button' type='button' onClick={handleClick} >Check Weather</button>
         {
             typeof currentWeather.main === "undefined" ? (
