@@ -27,6 +27,14 @@ body {
     font-weight: 400;
 }
 
+.timer {
+    color: aliceblue;
+    font-size: 2rem;
+    font-family: 'Montserrat', cursive;
+    padding-left: 1rem;
+    font-weight: 100;
+}
+
 .para {
     color: aliceblue;
     font-size: 1.5rem;
@@ -61,23 +69,24 @@ body {
     border: 1px none;
     border-radius: 0.5rem;
     font-size: 1.2rem;
-    font-weight: bold;
+    font-weight: 500;
+    background: rgb(101, 188, 223);
 }
 
 .button:hover {
-    background: orangered;
-    color: aliceblue;
+    background: skyblue;
+    color: black;
     outline: none;
 }
 
 .weather-card {
     width: 15.5rem;
     height: 18.75rem;
-    background: lightpink;
+    background-color: rgba(0, 0, 0, 0.6);
     border-radius: 0.5rem;
     position: absolute;
     transform: translate(-50%, -50%);
-    top: 35%;
+    top: 45%;
     left: 50%;
     display: flex;
     flex-direction: column;
@@ -93,11 +102,13 @@ body {
 .weather-temp {
     font-size: 1.7rem !important;
     font-weight: 300;
+    color: skyblue;
 }
 
 .weather-description {
     font-size: 1.5rem !important;
     font-weight: 400;
+    color: skyblue;
 }
 
 .weather-location {
@@ -105,4 +116,5 @@ body {
     font-weight: 500 !important;
     font-weight: 400;
     line-height: 1.7;
+    color: skyblue;
 }

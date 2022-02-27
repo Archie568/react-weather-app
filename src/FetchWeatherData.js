@@ -45,7 +45,6 @@ function FetchWeatherData() {
                     <img className='weather-icons' src={`http://openweathermap.org/img/w/${currentWeather.weather[0].icon}.png`} alt='icon of current weather'></img>
                     <p className='weather-description' >{currentWeather.weather[0].main}</p>
                     <p className='weather-location' >{currentWeather.name}</p>
-
                 </div>
             )
         }
